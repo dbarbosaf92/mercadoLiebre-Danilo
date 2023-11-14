@@ -1,0 +1,238 @@
+
+/* ● Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; */
+
+/* Tipografías
+Familia: 'Roboto'
+ */
+
+/*  Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   
+   font-family: "Roboto", sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.3rem;
+}
+
+p {
+   font-size: 12px;
+}
+
+h2 {
+   font-size: 24px;
+}
+
+.price-main {
+   font-size: 18px;
+}
+
+.offers-main, .description-main{
+   font-size: 16px;
+}
+
+.descripcion-main{
+   display: none;
+}
+
+header {
+   background-color: #EAC926;
+   padding: 20px;
+}
+
+.logo-header{
+   width: 50%;
+   height: auto;
+}
+
+
+.header-topbar-logo{
+   display: flex;
+   justify-content: space-between;
+}
+
+.header-cuotas-tarjetas {
+   font-weight: 400;
+   text-align: center;
+
+}
+
+.main-navbar {
+   display: none;
+   
+}
+
+.burger-menu{
+   background-color: #03264C;
+   color: #ffffff;
+   display: block;
+   max-width: 50px;
+   padding: 15px 0;
+   border-radius: 8px;
+   text-align: center;
+   font-size: 18px;
+   margin: auto;
+}
+/* Como lo hice yo */
+
+/* .fa-bars {
+   background-color:#03264C;
+   border-style: solid;
+   border-color: #03264C;
+   border-width: 8px;
+   color: #ffffff;
+   border-radius: 2px;   
+} */
+
+.main-navbar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 12px;
+}
+.main-navbar a {
+   text-decoration: none;
+   color: #222222;
+   display: inline-block;
+   padding: 5px 2px;
+   
+}
+
+.main_principal{
+   margin: auto;
+   width: 90%;
+   
+}
+
+.contenedor_articulo {
+   margin-bottom: 10px;
+   border-top: solid 1px #ebebeb;
+   padding: 15px;
+}
+
+
+/* .fa-truck, .offers-main{
+   display: block;
+   font-size: 16px;
+   padding: 5px;
+   width: 30px;
+   height: 30px;
+   border: 1px solid #39b54a;
+   background-color: #FFF;
+   border-radius: 50%;
+   position: absolute;
+   right: 20px;
+   top: -15px; 
+}
+.offers-main{
+   position: relative;
+} */
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+.fa-credit-card, .fa-gift, .fa-user-shield {
+   color: #03264C;
+   background-size: 2em;
+   margin-bottom: 10px;
+}
+
+
+footer{
+   text-align: center;
+}
+
+@media(min-width: 550px){
+   .contenedor_articulo {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   }
+
+   .descripcion-main{
+      display: block;
+   }
+   
+   .header-topbar{
+      display: flex;
+      justify-content: space-between;   
+   }
+
+   .header-cuotas-tarjetas{
+      min-width: 150px;
+      text-align: right;
+      font-size: 20px;
+   }
+
+   .main-navbar {
+      display: flex;
+      justify-content: space-between; 
+    
+   }
+
+   .main-navbar ul {
+      display: flex;         
+   }
+   .main-navbar li {
+      margin: 0 2px;   
+   }
+   .burger-menu {
+      display: none;
+   }
+
+}
+@media(min-width: 1024px){
+  
+   .logo-header{
+      width: 250px;
+   }
+
+   .header-topbar, .main-navbar{
+      max-width: 1200px;
+      margin: auto;
+      
+   }
+
+   .header-topbar{
+      align-items: center;
+   }
+
+   .header-cuotas-tarjetas{
+      max-width: none;
+      font-size: 25px;
+      font-weight: 400;
+      margin: 0;
+   }
+   .main-navbar li{
+      margin: 0 10px;
+   }
+
+   .main-navbar a {
+      font-size: 22px;
+   }
+
+
+
+
+   .descripcion-main{
+      display: block;
+   }
+
+}
