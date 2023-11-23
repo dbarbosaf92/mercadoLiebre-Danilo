@@ -1,0 +1,131 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+  }
+
+
+body {
+     font-family: "Roboto", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 15px;
+     background-color:  #e4e0e0;
+}
+
+header {
+     background-color: #EAC926;
+}
+
+main{
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   margin: auto;
+   
+}
+
+.header-off{
+     display: none;
+}
+
+.logo-header{
+     display: flex;
+     margin: auto;
+     padding: 7px;
+}
+
+
+.header-navbar {
+     display: none;   
+  }
+  
+  .header-navbar ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     font-size: 0.6rem;
+  }
+  .header-navbar a {
+     text-decoration: none;
+     color: #222222;
+     display: inline-block;
+     padding: 5px 2px;
+     
+  }
+  
+  
+  .header-cuotas-tarjetas {
+     font-weight: 400;
+     text-align: center;
+     margin-bottom: 1rem;
+  }
+
+
+.login-form {
+     padding: 15px 20px;
+     margin:  0 auto;
+     text-align: center;
+     font-family: "Roboto", sans-serif;
+     max-width: 400px;
+}
+.login-form h3 {
+     margin-bottom: 10px;
+}
+
+.login-form button {
+     background-color: #1259c3;
+     border: none;
+     padding: 8px;
+     color: #ffffff;
+     width: 50%;
+     border-radius: 5px;
+}
+.control-form{
+     margin-bottom: 10px;
+     display: block;
+}
+
+.control {
+     width: 100%;
+     padding: 5px;
+     border: none;
+     border-radius: 3px;
+}
+
+.control :hover {
+     color: #1259c3;
+}
+
+
+
+
+footer {
+     display: flex;
+     text-align: center;
+     background-color: #ffffff;
+  }
+
+.fa-credit-card, .fa-gift, .fa-user-shield {
+     color: #1259c3;
+     background-size: 2em;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     
+}
+
+
+@media (min-width: 481px) {
+     
+     .header-off {
+          display: block;
+     }
+}
+
+@media(min-width: 768px) {
+
+     .header-off {
+          display: block;
+     }
+}

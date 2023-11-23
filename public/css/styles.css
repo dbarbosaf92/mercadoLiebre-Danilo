@@ -29,7 +29,7 @@ body {
    font-family: "Roboto", sans-serif;
    font-style: normal;
    font-weight: 400;
-   font-size: 1.3rem;
+   font-size: 15px;
 }
 
 p {
@@ -40,6 +40,11 @@ h2 {
    font-size: 24px;
 }
 
+img {
+   width: 100%;
+   height: auto;
+}
+
 .price-main {
    font-size: 18px;
 }
@@ -48,13 +53,9 @@ h2 {
    font-size: 16px;
 }
 
-.descripcion-main{
-   display: none;
-}
-
 header {
    background-color: #EAC926;
-   padding: 20px;
+   padding: 11px;
 }
 
 .logo-header{
@@ -62,22 +63,39 @@ header {
    height: auto;
 }
 
+.header-navbar {
+   display: none;   
+}
 
-.header-topbar-logo{
+.nav-search {
+   width: 50%;
+   height: auto;
+}
+
+.header-navbar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   font-size: 0.6rem;
+}
+.header-navbar a {
+   text-decoration: none;
+   color: #222222;
+   display: inline-block;
+   padding: 5px 2px;
+   
+}
+
+.header-toplogo {
    display: flex;
-   justify-content: space-between;
 }
 
 .header-cuotas-tarjetas {
    font-weight: 400;
    text-align: center;
-
+   margin-bottom: 1rem;
 }
 
-.main-navbar {
-   display: none;
-   
-}
 
 .burger-menu{
    background-color: #03264C;
@@ -101,30 +119,37 @@ header {
    border-radius: 2px;   
 } */
 
-.main-navbar ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   font-size: 12px;
+main {
+   background-color: #e4e0e0;
+   padding-bottom: 1rem;
 }
-.main-navbar a {
-   text-decoration: none;
-   color: #222222;
-   display: inline-block;
-   padding: 5px 2px;
-   
-}
-
 .main_principal{
    margin: auto;
-   width: 90%;
-   
+   width: 90%; 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around; 
 }
+
+main h2 {
+   padding: 0.5rem;
+}
+
+.main-wrap {
+   width: 80%;
+}
+
 
 .contenedor_articulo {
    margin-bottom: 10px;
-   border-top: solid 1px #ebebeb;
+   border-top: solid 1px rgb(214, 207, 207);
    padding: 15px;
+   background-color: #ffffff;
+   border-radius: 0.5rem;
+}
+
+.description-main{
+   display: none;
 }
 
 
@@ -145,23 +170,31 @@ header {
    position: relative;
 } */
 
-img {
-   width: 100%;
-   height: auto;
-}
 
 .fa-credit-card, .fa-gift, .fa-user-shield {
-   color: #03264C;
+   color: #1259c3;
    background-size: 2em;
    margin-bottom: 10px;
+   margin-top: 10px;
+   
 }
-
 
 footer{
+   padding: 1rem 2rem;
+   display: flex;
    text-align: center;
+   font-size: 20px;
+}
+footer h4 {
+   padding: 10px;
 }
 
-@media(min-width: 550px){
+@media(min-width: 481px){
+   
+   .logo-header{
+      width: 150px;
+   }
+
    .contenedor_articulo {
       box-shadow: 0px 0px 10px rgb(100, 100, 100);
    }
@@ -172,25 +205,32 @@ footer{
    
    .header-topbar{
       display: flex;
-      justify-content: space-between;   
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;   
+   }
+
+   .header-toplogo {
+      align-items: center;
+      gap: 30px;
    }
 
    .header-cuotas-tarjetas{
       min-width: 150px;
       text-align: right;
-      font-size: 20px;
+      font-size: 13px;
    }
 
-   .main-navbar {
+   .header-navbar {
       display: flex;
       justify-content: space-between; 
     
    }
 
-   .main-navbar ul {
+   .header-navbar ul {
       display: flex;         
    }
-   .main-navbar li {
+   .header-navbar li {
       margin: 0 2px;   
    }
    .burger-menu {
@@ -198,7 +238,7 @@ footer{
    }
 
 }
-@media(min-width: 1024px){
+@media(min-width: 768px){
   
    .logo-header{
       width: 250px;
@@ -210,25 +250,19 @@ footer{
       
    }
 
-   .header-topbar{
-      align-items: center;
-   }
-
    .header-cuotas-tarjetas{
       max-width: none;
       font-size: 25px;
       font-weight: 400;
       margin: 0;
    }
-   .main-navbar li{
+   .header-navbar li{
       margin: 0 10px;
    }
 
-   .main-navbar a {
-      font-size: 22px;
+   .header-navbar a {
+      font-size: 0.8rem;
    }
-
-
 
 
    .descripcion-main{

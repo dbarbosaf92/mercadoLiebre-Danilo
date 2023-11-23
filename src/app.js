@@ -16,3 +16,17 @@ app.listen(3030, () => console.log("esta corriendo el puerto: http://localhost:3
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
+
+app.get('/register',(req, res) => {
+    let htmlPath = path.resolve(__dirname, './views/register.html');
+    res.sendFile(htmlPath)
+})
+
+app.post ('/register',(req, res) => {
+    res.send('Llego el formulario de register')
+})
+
+app.get('/login',(req, res) => {
+    let htmlPath = path.resolve(__dirname, './views/login.html');
+    res.sendFile(htmlPath)
+})
