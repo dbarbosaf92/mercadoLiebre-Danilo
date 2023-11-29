@@ -17,7 +17,7 @@ Titulares (Basado en tu última visita/Ofertas): 24px
 Precios: 18px
 Descuentos: 16px
 Descripciones: 16px */
-
+ /* Estilos generales */
 * {
    margin: 0;
    padding: 0;
@@ -52,13 +52,18 @@ img {
 .offers-main, .description-main{
    font-size: 16px;
 }
-
+/* Estilos del Header */
 header {
    background-color: #EAC926;
    padding: 11px;
 }
 
-.logo-header{
+.header-toplogo {
+   display: flex;
+   gap: 20px;
+}
+
+.conteiner-logo {
    width: 50%;
    height: auto;
 }
@@ -67,10 +72,40 @@ header {
    display: none;   
 }
 
-.nav-search {
+/* Estilos de la barra de busqueda */
+
+.search-container {
    width: 50%;
    height: auto;
+   position: relative;   
 }
+
+.nav-search-input {
+   padding: 12px;
+   padding-right: 10px;
+   border-radius: 3px;
+   border: none;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+}
+
+.search-button {
+   background-color: #FFF;
+   padding: 11px 13px;
+   position: absolute;
+   border: none;
+   top: 0;
+   bottom: 28px;
+   right: 0;
+   margin: auto;
+   border-radius: 3px;
+   height: 50%;
+}
+
+
+
 
 .header-navbar ul {
    list-style: none;
@@ -86,9 +121,6 @@ header {
    
 }
 
-.header-toplogo {
-   display: flex;
-}
 
 .header-cuotas-tarjetas {
    font-weight: 400;
@@ -119,33 +151,28 @@ header {
    border-radius: 2px;   
 } */
 
+/* Estilos del main */
 main {
    background-color: #e4e0e0;
    padding-bottom: 1rem;
 }
 .main_principal{
    margin: auto;
-   width: 90%; 
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around; 
+   width: 90%;  
 }
 
 main h2 {
    padding: 0.5rem;
 }
 
-.main-wrap {
-   width: 80%;
-}
-
-
+/* Estilos del contenedor de los productos */
 .contenedor_articulo {
    margin-bottom: 10px;
    border-top: solid 1px rgb(214, 207, 207);
    padding: 15px;
    background-color: #ffffff;
    border-radius: 0.5rem;
+   position: relative;
 }
 
 .description-main{
@@ -153,22 +180,26 @@ main h2 {
 }
 
 
-/* .fa-truck, .offers-main{
+
+.fa-truck{
    display: block;
    font-size: 16px;
    padding: 5px;
    width: 30px;
    height: 30px;
+   color: #39b54a;
    border: 1px solid #39b54a;
    background-color: #FFF;
    border-radius: 50%;
    position: absolute;
    right: 20px;
-   top: -15px; 
+   top: 360px; 
 }
-.offers-main{
+
+.offers-main {
+   color: #39b54a;
    position: relative;
-} */
+} 
 
 
 .fa-credit-card, .fa-gift, .fa-user-shield {
@@ -178,7 +209,7 @@ main h2 {
    margin-top: 10px;
    
 }
-
+/* Estilos del Footer */
 footer{
    padding: 1rem 2rem;
    display: flex;
@@ -188,11 +219,16 @@ footer{
 footer h4 {
    padding: 10px;
 }
-
+/* Media para el formato de tablet */
 @media(min-width: 481px){
    
    .logo-header{
       width: 150px;
+   }
+
+   .search-button {
+      height: 70%;
+      bottom: 8px;
    }
 
    .contenedor_articulo {
@@ -206,19 +242,27 @@ footer h4 {
    .header-topbar{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      align-items: center;   
+      justify-content: space-around;
+      align-items: center; 
+      gap: 5px;  
    }
 
    .header-toplogo {
       align-items: center;
       gap: 30px;
+      width: 70%;
    }
 
    .header-cuotas-tarjetas{
+      display: flex;
       min-width: 150px;
       text-align: right;
-      font-size: 13px;
+      align-items: center;
+      width: 30%;
+   }
+
+   .header-cuotas-tarjetas h2 {
+      font-size: 11px;
    }
 
    .header-navbar {
@@ -237,22 +281,36 @@ footer h4 {
       display: none;
    }
 
+   
+
+
 }
 @media(min-width: 768px){
   
+   header {
+      width: 100%;
+   }
    .logo-header{
-      width: 250px;
+      width: 100%;
+   }
+
+   .header-topbar {
+      justify-content: space-between;
+   }
+
+   .header-toplogo {
+      width: 60%;
+      align-items: center;
    }
 
    .header-topbar, .main-navbar{
-      max-width: 1200px;
-      margin: auto;
-      
+      margin: auto;   
    }
+
 
    .header-cuotas-tarjetas{
       max-width: none;
-      font-size: 25px;
+      font-size: 18px;
       font-weight: 400;
       margin: 0;
    }
